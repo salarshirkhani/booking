@@ -1,0 +1,29 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org" uri="http://www.springframework.org/tags/form">
+<head>
+    <meta charset="UTF-8">
+    <title>QOM SOCIAL HOMEPAGE</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+    <link rel="stylesheet" href="../static/style.css" th:href="@{/style.css}">
+
+
+</head>
+
+<form id="msform" >
+    <!-- progressbar -->
+
+    <!-- fieldsets -->
+    <fieldset>
+        <h2 class="fs-title">Qom Social Network</h2>
+        <h3 class="fs-subtitle">Do You Want have lot of fun ? Sing up </h3>
+
+        <a name="SING UP" class="previous action-button" value="SIGN UP" th:href="@{addUser}">SIGN UP</a>
+        <a name="LOGIN" class="submit action-button" value="LOGIN" th:href="@{login}">LOGIN</a>
+    </fieldset>
+</form>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="../static/script.js" th:href="@{/script.js}"></script>
+</html>

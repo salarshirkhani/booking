@@ -1,0 +1,47 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org" uri="http://www.springframework.org/tags/form">
+<head>
+    <meta charset="UTF-8">
+    <title>find by name</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+    <link rel="stylesheet" href="../static/style.css" th:href="@{/style.css}">
+
+
+</head>
+
+<form method = "POST" action="/addUser"  th:action = "@{/findbycity}" th:object="${users}" id="msform" >
+    <!-- progressbar -->
+
+    <!-- fieldsets -->
+    <fieldset>
+        <h2 class="fs-title">Search By Behavior And Favorite</h2>
+        <h3 class="fs-subtitle">you can search your favorite personality</h3>
+        <label>
+            <select style= "padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;" th:field="*{thing3}">
+
+                <option value="Tehran">Tehran</option>
+                <option value="Qom">Qom</option>
+                <option value="Tabriz">Tabriz</option>
+                <option value="Mashhhad">Mashhhad</option>
+                <option value="Shiraz">Shiraz</option>
+                <option value="Isfahan">Isfahan</option>
+                <option value="kerman">kerman</option>
+            </select>
+        </label>
+        <input type="submit" name="submit" class="submit action-button" value="Submit" />
+    </fieldset>
+</form>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="../static/script.js" th:href="@{/script.js}"></script>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" uri="http://www.springframework.org/tags/form">
+<head>
+    <meta charset="UTF-8">
+    <title>show all user</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="../static/style.css" th:href="@{/style.css}">
+</head>
+<body>
+<h2 style="font-weight: 800;
+    font-size: 17px;
+	color: #666;
+
+    	width: 400px;
+	margin: 45px auto;
+	text-align: center;
+	position: relative;
+    background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;" >All User </h2 >
+<table style="
+    	width: 400px;
+	margin: 75px auto;
+	text-align: center;
+	position: relative;
+    background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;">
+
+
+    <tr th:each="customer: ${find}" style="margin: 0px;
+    padding: 12px 19px 12px 27px;
+    border-bottom: 1px solid;
+    font-size: 100%;
+    font: inherit;">
+
+        <td th:text="${customer.id}"></td>
+        <td >Name <hr><br></td >
+        <td th:text="${customer.firstname}" style="margin: 0px;
+    padding: 12px 19px 12px 27px;
+    border-bottom: 1px solid;
+    font-size: 100%;
+    font: inherit;"> <br> </td>
+        <td>City <hr><br></td>
+        <td th:text="${customer.thing3}" style="margin: 0px;
+        padding: 12px 19px 12px 27px;
+        border-bottom: 1px solid;
+        font-size: 100%;
+        font: inherit;"> <br> </td>
+        <td>Email <hr><br> </td>
+        <td th:text="${customer.email}" style="margin: 0px;
+        padding: 12px 19px 12px 27px;
+        border-bottom: 1px solid;
+        font-size: 100%;
+        font: inherit;"> <br> </td>
+        <td>about me <hr> <br> </td>
+        <td th:text="${customer.about}"style="margin: 0px;
+    padding: 12px 19px 12px 27px;
+    border-bottom: 1px solid;
+    font-size: 100%;
+    font: inherit;"> <br> </td>
+        <td style="margin: 0px;
+    padding: 12px 19px 12px 27px;
+    border-bottom: 1px solid;
+    font-size: 100%;
+    font: inherit;">behavior <hr> </td>
+        <td th:text="${customer.thing1}"> <br> </td>
+         <td style="margin: 0px;
+    padding: 12px 19px 12px 27px;
+    border-bottom: 1px solid;
+    font-size: 100%;
+    font: inherit;">favorite <hr> </td>
+        <td th:text="${customer.thing2}"> <br> </td>
+        <td style="margin: 0px;
+        padding: 12px 19px 12px 27px;
+        border-bottom: 1px solid;
+        font-size: 100%;
+        font: inherit;">  <a name="SING UP" style="width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+text-decoration: none;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 7px 5px;
+	margin: 10px 5px;" th:href="@{'/request/req/'+${customer.id}+'/'+${customer.thing2}+'/'+${customer.thing3}}">Like</a>
+        </td>
+    </tr>
+
+</table >
+</body>
+</html>

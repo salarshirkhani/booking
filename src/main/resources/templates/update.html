@@ -1,0 +1,74 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org" uri="http://www.springframework.org/tags/form">
+<head>
+    <meta charset="UTF-8">
+    <title>singup in qom social media</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+    <link rel="stylesheet" href="../static/style.css" th:href="@{/style.css}">
+
+
+</head>
+
+<form method = "POST" action="/addUser"  th:action = "@{/update}" th:object="${users}" id="msform" >
+    <!-- progressbar -->
+
+    <!-- fieldsets -->
+    <fieldset>
+        <h2 class="fs-title">Update account</h2>
+
+        <input type="text" name="username" placeholder="Username" th:field="*{username}" />
+        <input type="text" name="email" placeholder="Email" th:field="*{email}"/>
+        <br>
+        <h2 class="fs-title">Your Personality</h2>
+        <h3 class="fs-subtitle">Select 2 for Describing Who Are You? </h3>
+        <label>
+            <select style= "padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;" th:field="*{thing1}">
+
+                <option value="introvert">introvert</option>
+                <option value="extrovert">extrovert</option>
+                <option value="funny">funny</option>
+                <option value="humor">humor</option>
+                <option value="serious">serious</option>
+            </select>
+        </label>
+        <label>
+            <select style= "padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;" th:field="*{thing2}">
+
+                <option value="Bodybuilding">Body building</option>
+                <option value="Hiking">Hiking</option>
+                <option value="photography">photography</option>
+                <option value="humor">learning new language</option>
+                <option value="going cinema">going cinema</option>
+                <option value="smoking">smoking</option>
+            </select>
+        </label>
+
+        <br>
+        <h2 class="fs-title">Personal Details</h2>
+        <textarea name="address" placeholder="About me" th:field="*{about}"></textarea>
+
+        <input type="submit" name="submit" class="submit action-button" value="Submit" />
+    </fieldset>
+</form>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="../static/script.js" th:href="@{/script.js}"></script>
+</html>

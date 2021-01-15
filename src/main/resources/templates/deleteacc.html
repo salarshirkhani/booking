@@ -1,0 +1,26 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org" uri="http://www.springframework.org/tags/form">
+<head>
+    <meta charset="UTF-8">
+    <title>singup in qom social media</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+    <link rel="stylesheet" href="../static/style.css" th:href="@{/style.css}">
+
+
+</head>
+<body>
+<form method = "POST" action="/addUser"  th:action = "@{/deleteacc}" th:object="${users}" id="msform" >
+    <!-- progressbar -->
+
+    <!-- fieldsets -->
+    <fieldset>
+        <h2 class="fs-title">Delete Account</h2>
+        <input type="text" name="username" placeholder="Username" th:field="*{username}" />
+        <input type="password" name="password" placeholder="Password" th:field="*{password}"/>
+        <input type="submit" name="submit" class="submit action-button" value="Submit" />
+    </fieldset>
+</form>
+        </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" uri="http://www.springframework.org/tags/form">
+<head>
+    <meta charset="UTF-8">
+    <title>friend request</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="../static/style.css" th:href="@{/style.css}">
+</head>
+<body>
+<h2 style="font-weight: 800;
+    font-size: 17px;
+	color: #666;
+
+    	width: 400px;
+	margin: 45px auto;
+	text-align: center;
+	position: relative;
+    background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;" >Friend Request</h2 >
+<table style="
+    	width: 400px;
+	margin: 75px auto;
+	text-align: center;
+	position: relative;
+    background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;">
+
+
+    <tr th:each="customer: ${request}" style="margin: 0px;
+    padding: 12px 19px 12px 27px;    border-bottom: 1px solid;
+    font-size: 100%;
+    font: inherit;">
+
+        <td >guest Name <hr><br></td >
+        <td th:text="${customer.guestid}" style="margin: 0px;
+    padding: 12px 19px 12px 27px;
+    border-bottom: 1px solid;
+    font-size: 100%;
+    font: inherit;"> <br> </td>
+        <td>accept <hr><br></td>
+        <td th:text="${customer.tik}" style="margin: 0px;
+        padding: 12px 19px 12px 27px;
+        border-bottom: 1px solid;
+        font-size: 100%;
+        font: inherit;"> <br> </td>
+        <td style="margin: 0px;
+        padding: 12px 19px 12px 27px;
+        border-bottom: 1px solid;
+        font-size: 100%;
+        font: inherit;">  <a name="SING UP" style="width: 100px;
+	background: #ff1818;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border: 0 none;
+    border-radius: 7px;
+	cursor: pointer;
+	padding: 7px 5px;
+	margin: 10px 5px;" th:href="@{..+'/deleteByid/'+${customer.userid}+'/'+${customer.guestid}}">Delete</a>
+        </td>
+        <td style="margin: 0px;
+        padding: 12px 19px 12px 27px;
+        border-bottom: 1px solid;
+        font-size: 100%;
+        font: inherit;">  <a name="SING UP" style="width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+text-decoration: none;
+	border: 0 none;
+	 border-radius: 7px;
+	cursor: pointer;
+	padding: 7px 5px;
+	margin: 10px 5px;" th:href="@{'/request/req/'+${customer.userid}+'/'+${customer.guestid}+'/1'}">Accept</a>
+        </td>
+        <td style="margin: 0px;
+        padding: 12px 19px 12px 27px;
+        border-bottom: 1px solid;
+        font-size: 100%;
+        font: inherit;">  <a name="SING UP" style="width: 100px;
+	background: #FF9800;
+	font-weight: bold;
+	color: white;
+text-decoration: none;
+	border: 0 none;
+    border-radius: 7px;
+	cursor: pointer;
+	padding: 7px 5px;
+	margin: 10px 5px;" th:href="@{'/report/'+${customer.userid}}">Report</a>
+        </td>
+    </tr>
+
+</table >
+</body>
+</html>

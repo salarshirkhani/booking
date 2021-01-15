@@ -1,0 +1,30 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org" uri="http://www.springframework.org/tags/form">
+<head>
+    <meta charset="UTF-8">
+    <title>log in</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+    <link rel="stylesheet" href="../static/style.css" th:href="@{/style.css}">
+
+
+</head>
+
+<form method = "POST" action="/addUser"  th:action = "@{/login}" th:object="${user}" id="msform" >
+    <!-- progressbar -->
+
+    <!-- fieldsets -->
+    <fieldset>
+        <h2 class="fs-title">LOG IN</h2>
+        <h3 class="fs-subtitle">Log in in your account</h3>
+        <p th:if="${invalidCredentials}" class="error">username or password is incorrect</p>
+        <input type="text" name="username" placeholder="Username" th:field="*{username}" />
+        <input type="password" name="password" placeholder="Password" th:field="*{password}"/>
+        <input type="submit" name="submit" class="submit action-button" value="Submit" />
+    </fieldset>
+</form>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="../static/script.js" th:href="@{/script.js}"></script>
+</html>

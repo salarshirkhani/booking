@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>user show</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="../static/style.css" th:href="@{/style.css}">
+</head>
+<body>
+<h2 style="font-weight: 800;
+    font-size: 17px;
+	color: #666;
+text-decoration: none;
+    	width: 200px;
+    margin: 40px auto;
+    text-align: center;
+    position: relative;
+    background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 12px;
+	box-sizing: border-box;" th:text="${firstname}">User Information</h2 >
+<img alt="memorynotfound logo" src="../image/images.png" th:src="@{/images.png}"
+     style="font-weight: 800;
+    font-size: 17px;
+	color: #666;
+
+    margin: 40px 537px;
+    text-align: center;
+    position: relative;
+
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 12px;
+	box-sizing: border-box;" />
+<table  style="
+    	width: 800px;
+	margin: 75px auto 400px auto;
+	text-align: center;
+	position: relative;
+    background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box; ">
+<tr style="margin: 0px;
+    padding: 12px 19px 12px 27px;
+    border-bottom: 1px solid;
+    font-size: 100%;
+    font: inherit; ">
+<td >Username</td >
+<td th:text="${username}"></td >
+</tr >
+    <tr style="margin: 0px;
+    padding: 12px 19px 12px 27px;
+    border-bottom: 1px solid;
+    font-size: 100%;
+    font: inherit; ">
+<td >Password</td >
+<td th:text="${password}"></td >
+</tr>
+    <tr style="margin: 0px;
+    padding: 12px 19px 12px 27px;
+    border-bottom: 1px solid;
+    font-size: 100%;
+    font: inherit; ">
+    <td>Firstname</td>
+    <td th:text="${firstname}"></td>
+    </tr>
+    <tr style="margin: 0px;
+    padding: 12px 19px 12px 27px;
+    border-bottom: 1px solid;
+    font-size: 100%;
+    font: inherit; ">
+    <td>lastname</td>
+    <td th:text="${lastname}"></td >
+    </tr >
+    <tr style="margin: 0px;
+    padding: 12px 19px 12px 27px;
+    border-bottom: 1px solid;
+    font-size: 100%;
+    font: inherit; ">
+    <td>phone</td >
+    <td th:text="${phone}"></td >
+    </tr>
+    <tr style="margin: 0px;
+    padding: 12px 19px 12px 27px;
+    border-bottom: 1px solid;
+    font-size: 100%;
+    font: inherit; ">
+    <td>about</td >
+    <td th:text="${about}"></td >
+    </tr >
+    <tr style="margin: 0px;
+    padding: 12px 19px 12px 27px;
+    border-bottom: 1px solid;
+    font-size: 100%;
+    font: inherit; ">
+    <td>behavior</td >
+    <td th:text="${thing1}"></td >
+    </tr >
+    <tr style="margin: 0px;
+    padding: 12px 19px 12px 27px;
+    border-bottom: 1px solid;
+    font-size: 100%;
+    font: inherit; ">
+    <td >favorite</td >
+    <td th:text="${thing2}"></td >
+    </tr >
+    <tr style="margin: 0px;
+    padding: 12px 19px 12px 27px;
+    border-bottom: 1px solid;
+    font-size: 100%;
+    font: inherit; ">
+    <td >city</td >
+    <td th:text="${thing3}"></td >
+    </tr >
+    <tr style="margin: 0px;
+    padding: 12px 19px 12px 27px;
+    border-bottom: 1px solid;
+    font-size: 100%;
+    font: inherit; ">
+    <td >email</td >
+    <td th:text="${email}"></td >
+    </tr >
+</table >
+<a style="font-weight: 800;
+    font-size: 17px;
+	color: #666;
+left:120px;
+text-decoration: none;
+    	width: 200px;
+	margin: 0px 10px;
+	text-align: center;
+	position: absolute;
+    background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 12px;
+	box-sizing: border-box;" th:href="@{update}" >Update information</a >
+<a style="font-weight: 800;
+    font-size: 17px;
+	color: #666;
+left:370px;
+text-decoration: none;
+  width: 200px;
+	margin: 0px 10px;
+	text-align: center;
+	position: absolute;
+    background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 12px;
+	box-sizing: border-box;" th:href="@{'/request/watchreq/'+${id}}" >Requests</a >
+<a style="font-weight: 800;
+    font-size: 17px;
+	color: #666;
+left:620px;
+text-decoration: none;
+  width: 228px;
+	margin: 0px 10px;
+	text-align: center;
+	position: absolute;
+    background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 12px;
+	box-sizing: border-box;" th:href="@{deleteacc}">Delete my Page</a >
+<a style="font-weight: 800;
+    font-size: 17px;
+	color: #666;
+left:895px;
+text-decoration: none;
+ width: 200px;
+	margin: 0px 10px;
+	text-align: center;
+	position: absolute;
+    background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 12px;
+	box-sizing: border-box;" th:href="@{findbehavandfav}">Search </a >
+
+</body>
+</html>
